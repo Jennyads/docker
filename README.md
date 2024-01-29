@@ -95,7 +95,14 @@ docker network prune - remover em quantidade não utilizadas
 YAML: linguagem de serialização para configurar múltiplos containers  
 - geralmente possui chaves e valores;
 
+PROJETO 4:
 DOCKER-COMPOSE
 É uma ferramenta para rodar múltiplos containers;
+docker-compose up -roda projeto
+docker-compose down - encerra
 
+PROJETO 5:
+Orquestação é o ato de conseguir gerenciar e escalar os containers da nossa aplicação. Temos um serviço que rege sobre outros serviços, verificando se os mesmos estão funcionando como deveriam;
+alguns serviços: docker swarn. kubernetes, apache mesos. 
 ```
+
