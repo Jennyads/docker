@@ -103,6 +103,6 @@ docker-compose down - encerra
 
 PROJETO 5:
 Orquestação é o ato de conseguir gerenciar e escalar os containers da nossa aplicação. Temos um serviço que rege sobre outros serviços, verificando se os mesmos estão funcionando como deveriam;
-alguns serviços: docker swarn. kubernetes, apache mesos. 
+alguns serviços: docker swarn, kubernetes, apache mesos. 
 ```
 
