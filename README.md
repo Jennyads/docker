@@ -104,6 +104,17 @@ docker-compose down - encerra
 PROJETO 5:
 Orquestação é o ato de conseguir gerenciar e escalar os containers da nossa aplicação. Temos um serviço que rege sobre outros serviços, verificando se os mesmos estão funcionando como deveriam;
 alguns serviços: docker swarn, kubernetes, apache mesos. 
-Swarn - ferramenta do docker para orquestrar containers, podendo escalar horizontalmente os projetos (cluster). 
+Swarn - ferramenta do docker para orquestrar containers, podendo escalar horizontalmente os projetos (cluster).
+
+AWS:
+sudo yum update -y
+sudo yum install docker
+sudo service docker start
+sudo docker ps
+sudo usermod -a -G docker ec2-user
+sudo docker ingo
+sudo docker swarm init
+sudo docker swarm leave -f
 ```
+
 
