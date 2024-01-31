@@ -115,6 +115,7 @@ ssh -i "node1.pem" ec2-user@ec2-3-145-93-45.us-east-2.compute.amazonaws.com
 
 join:
 sudo docker swarm join --token SWMTKN-1-3751zys9iybxu1kxeyjzy6nnpj3gyk3jbkbxzt8ptx6ye38g6u-a7e8mfun4bm1t8fjsefv0me86 3.145.2.180:2377
+docker swarm join-toker manager    - mostra o comando, facilitando o acesso
 
 AWS:
 sudo yum update -y
@@ -131,13 +132,19 @@ docker swarm join --token <TOKEN> <IP>:<PORTA>
 
 
 sudo docker service create -p 80:80 --name nginxswarm nginx
+docker servce create --name <nome> <imagem>
+docker service create --name <NOME> --replicas <NUMERO> -p <PORTA> <IMAGEM>
+
 docker service ls
 docker service rm <nome>
+docker container rm <NOME> -f -fica indisponivel muito rápido no node, pois o swarm restaura novamente pela orquestração
+docker info
+docker swarm leave  - desconectar/remover uma instância
 
 
 
 
-docker servce create --name <nome> <imagem>
+
 ```
 
 
