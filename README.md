@@ -105,6 +105,16 @@ PROJETO 5:
 Orquestação é o ato de conseguir gerenciar e escalar os containers da nossa aplicação. Temos um serviço que rege sobre outros serviços, verificando se os mesmos estão funcionando como deveriam;
 alguns serviços: docker swarn, kubernetes, apache mesos. 
 Swarn - ferramenta do docker para orquestrar containers, podendo escalar horizontalmente os projetos (cluster).
+node: máquina conectada ao swarm
+node1:
+ssh -i "node1.pem" ec2-user@ec2-3-145-2-180.us-east-2.compute.amazonaws.com
+node2:
+ssh -i "node1.pem" ec2-user@ec2-3-144-23-235.us-east-2.compute.amazonaws.com
+node3:
+ssh -i "node1.pem" ec2-user@ec2-3-145-93-45.us-east-2.compute.amazonaws.com
+
+join:
+sudo docker swarm join --token SWMTKN-1-3751zys9iybxu1kxeyjzy6nnpj3gyk3jbkbxzt8ptx6ye38g6u-a7e8mfun4bm1t8fjsefv0me86 3.145.2.180:2377
 
 AWS:
 sudo yum update -y
@@ -112,9 +122,22 @@ sudo yum install docker
 sudo service docker start
 sudo docker ps
 sudo usermod -a -G docker ec2-user
-sudo docker ingo
+sudo docker info
 sudo docker swarm init
 sudo docker swarm leave -f
+docker swarm init --advertise-addr 3.145.2.180
+docker node ls
+docker swarm join --token <TOKEN> <IP>:<PORTA>
+
+
+sudo docker service create -p 80:80 --name nginxswarm nginx
+docker service ls
+docker service rm <nome>
+
+
+
+
+docker servce create --name <nome> <imagem>
 ```
 
 
