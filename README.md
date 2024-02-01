@@ -134,12 +134,21 @@ docker swarm join --token <TOKEN> <IP>:<PORTA>
 sudo docker service create -p 80:80 --name nginxswarm nginx
 docker servce create --name <nome> <imagem>
 docker service create --name <NOME> --replicas <NUMERO> -p <PORTA> <IMAGEM>
-
+docker swarm leave  - desconectar/remover uma instância
 docker service ls
 docker service rm <nome>
 docker container rm <NOME> -f -fica indisponivel muito rápido no node, pois o swarm restaura novamente pela orquestração
 docker info
-docker swarm leave  - desconectar/remover uma instância
+docker node rm <ID>
+docker service inspect <ID>
+docker service ps <ID>
+docker stack deploy -c <ARQUIVO.YAML> <NOME> - rodar com o docker compose
+docker service scale <NOME>=<REPLICAS>
+docker node update --availability drain <ID> -fazer com que serviço não receba mais ordens do manager
+docker service update --image <IMAGE> <SERVICE> -atualizar configurações do node
+
+
+
 
 
 
