@@ -101,7 +101,7 @@ DOCKER-COMPOSE
 docker-compose up -roda projeto
 docker-compose down - encerra
 
-PROJETO 5:
+MODULO 8 - Docker Swarm:
 Orquestação é o ato de conseguir gerenciar e escalar os containers da nossa aplicação. Temos um serviço que rege sobre outros serviços, verificando se os mesmos estão funcionando como deveriam;
 alguns serviços: docker swarn, kubernetes, apache mesos. 
 Swarn - ferramenta do docker para orquestrar containers, podendo escalar horizontalmente os projetos (cluster).
@@ -147,6 +147,20 @@ docker service scale <NOME>=<REPLICAS>
 docker node update --availability drain <ID> -fazer com que serviço não receba mais ordens do manager
 docker service update --image <IMAGE> <SERVICE> -atualizar configurações do node
 
+docker network create --driver overlay swarm
+docker network create
+sudo docker service create -p 80:80 --name nginxswarm --network swarm nginx  -isolar serviços
+docker service update --network-add <REDE> <NOME> - conectar serviço existente a uma rede
+
+
+Modulo 9- Orquestração com Kubernets
+orquestração de containers: cada serviço tem um container, kubernetes auxilia na comunição entre esses serviços
+control plane: onde é gerenciado o controle dos processos dos nodes;
+nodes: máquinas que são gerenciadas pelo control plane;
+deployment: a execução de uma imagem/projeto em um pod;
+pod: um ou mais containers que estão em um node;
+services: serviços que expõe os pods ao mundo externo;
+kutectl: cliente de linha de comando para o kubernetes;
 
 
 
