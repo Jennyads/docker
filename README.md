@@ -159,7 +159,7 @@ control plane: onde é gerenciado o controle dos processos dos nodes;
 nodes: máquinas que são gerenciadas pelo control plane;
 deployment: a execução de uma imagem/projeto em um pod, com ele criamos nosso serviço que vai rodar nos pods;
 pod: um ou mais containers que estão em um node, ação em que um container é executado
-services: serviços que expõe os pods ao mundo externo;
+services: serviços que expõe os pods ao mundo externo/rede;
 kutectl: cliente de linha de comando para o kubernetes;
 
 minikube start --driver=docker
