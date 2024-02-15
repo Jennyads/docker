@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: flask
-          image: matheusbattisti/flask-kub-projeto:5
+          image: jennyads/flask-kub-projeto:2
