@@ -169,6 +169,9 @@ minikube dashboard
 
 projeto:
 docker build -t jennyads/flask-kub-projeto .
+docker build -t jennyads/flask-kub-projeto:2 .
+kubectl set image deployment/flask-deployment flask-kub-projeto=jennyads/flask-kub-projeto:2  -atualiza de acordo com a nova imagem
+kubectl set image deployment/<NOME> <NOME_CONTAINER>=<NOVA_IMAGEM>  -atualiza de acordo com a nova imagem
 docker run -d -p 5000:5000 --name flask-kub --rm jennyads/flask-kub-projeto
 docker push jennyads/flask-kub-projeto
 
@@ -178,6 +181,27 @@ kubectl describe deployments
 kubectl get pods
 kubectl describe pods
 kubectl config view
+kubectl expose deployment flask-deployment --type=LoadBalancer --port=5000
+minikube service flask-deployment
+kubectl get services
+kubectl describe services/flask-deployment
+kubectl scale deployment/flask-deployment --replicas=5
+kubectl get rs    -checar replicas
+
+kubectl rollouts status deployment/flask-deployment
+kubectl rollouts undo deployment/flask-deployment   -desfazer/excluir pods que estão dando problema de acordo com a atualização feita
+
+kubectl delete service <NOME>
+kubectl delete service flask-deployment
+
+kubectl delete deployment <NOME>
+kubectl delete deployment flask-deployment
+
+
+modo declarativo: guiado por um arquivo escrito em yaml.
+
+
+
 
 
 
