@@ -199,7 +199,11 @@ kubectl delete deployment flask-deployment
 
 
 modo declarativo: guiado por um arquivo escrito em yaml.
-
+kubectl apply -f flask.yaml 
+kubectl delete -f .\flask.yaml
+kubectl apply -f flask-service.yaml
+minikube service flask-service
+kubectl delete -f <ARQUIVO>
 
 
 
