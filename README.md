@@ -206,8 +206,15 @@ minikube service flask-service
 kubectl delete -f <ARQUIVO>
 
 
+atualizar:
+docker push jennyads/flask-kub-projeto:3
+kubectl apply -f flask.yaml
 
-
+3:
+kubectl apply -f flask-project.yaml
+kubectl get services
+kubectl get pods
+minikube service flask-service
 
 ```
 
