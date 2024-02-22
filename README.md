@@ -216,6 +216,34 @@ kubectl get services
 kubectl get pods
 minikube service flask-service
 
+
+comandos básicos linux:
+terminal: receptor de comandos
+shell: executor 
+COMANDOS -OPÇÕES ARQUIVOS/DIRETORIOS
+ls -parametro
+ls -a (arquivos ocultos)
+la -la
+ls -ls (tamanho dos arquivos)
+ls -ltr (informações detalhadas)
+ls -lr /etc (ordem reversa)
+ls -R (mostra o que tem em cada pasta)
+ls -m (lista com virgula)
+ls --help
+ctrl + alt + t = abre terminal
+cat : criar ou ler conteudo do arquivo
+cat nome_arquivo
+cat -n nome_arquivo (acrescenta numeração de linha)
+cat nome_arquivo nome_arquivo2 (lÊ dois arquivos simultaneamente)
+cat nome_arquivo nome_arquivo2 > nome_arquivo3 (cria novo arquivo juntando o conteudo dos dois) 
+*se usar >> mantem o que tem e adiciona mais
+
+touch - cria arquivo sem conteudo e modifica hora de atualização
+
+man - manual de todos os comandos 
+
+ctrl + r - busca comandos usados anteriormente
+
 ```
 
 
